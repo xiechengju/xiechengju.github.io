@@ -5,15 +5,20 @@
   
 
   
-  <title>XIE.</title>
+  <title>express中的req&amp;res | XIE.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="XIE.">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="express模块中的req，res参数的常用属性方法 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="express中的req&amp;res">
+<meta property="og:url" content="http://yoursite.com/2019/11/24/express中的req&res/index.html">
 <meta property="og:site_name" content="XIE.">
+<meta property="og:description" content="express模块中的req，res参数的常用属性方法 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-09-21T10:28:20.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XIE.">
+<meta name="twitter:title" content="express中的req&amp;res">
+<meta name="twitter:description" content="express模块中的req，res参数的常用属性方法 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909">
   
     <link rel="alternate" href="/atom.xml" title="XIE." type="application/atom+xml">
   
@@ -60,52 +65,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-数组与链表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/21/数组与链表/" class="article-date">
-  <time datetime="2020-03-21T15:17:19.000Z" itemprop="datePublished">2020-03-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/21/数组与链表/">数组与链表</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h4><p>链表是一种上一个元素的引用指向下一个元素的存储结构，链表通过指针来连接元素与元素；<br>链表是线性表的一种，所谓的线性表包含顺序线性表和链表，顺序线性表是用数组实现的，在内存中有顺序排列，通过改变数组大小实现。而链表不是用顺序实现的，用指针实现，在内存中不连续。意思就是说，链表就是将一系列不连续的内存联系起来，将那种碎片内存进行合理的利用，解决空间的问题。<br>所以，链表允许插入和删除表上任意位置上的节点，但是不允许随即存取。链表有很多种不同的类型：单向链表、双向链表及循环链表</p>
-<h5 id="1单向链表"><a href="#1单向链表" class="headerlink" title="1单向链表"></a>1单向链表</h5><p>单向链表包含两个域，一个是信息域，一个是指针域。也就是单向链表的节点被分成两部分，一部分是保存或显示关于节点的信息，第二部分存储下一个节点的地址，而最后一个节点则指向一个空值。</p>
-<h5 id="2双向链表"><a href="#2双向链表" class="headerlink" title="2双向链表"></a>2双向链表</h5><p>每个节点有2个链接，一个是指向前一个节点（当此链接为第一个链接时，指向的是空值或空列表），另一个则指向后一个节点（当此链接为最后一个链接时，指向的是空值或空列表）。意思就是说双向链表有2个指针，一个是指向前一个节点的指针，另一个则指向后一个节点的指针。</p>
-<h5 id="3循环链表"><a href="#3循环链表" class="headerlink" title="3循环链表"></a>3循环链表</h5><p>循环链表就是首节点和末节点被连接在一起。循环链表中第一个节点之前就是最后一个节点，反之亦然。</p>
-<h4 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h4><p>链表是链式的存储结构；数组是顺序的存储结构。<br>链表通过指针来连接元素与元素，数组则是把所有元素按次序依次存储。<br>链表的插入删除元素相对数组较为简单，不需要移动元素，且较为容易实现长度扩充，但是寻找某个元素较为困难；<br>数组寻找某个元素较为简单，但插入与删除比较复杂，由于最大长度需要再编程一开始时指定，故当达到最大长度时，扩充长度不如链表方便。<br>相同：两种结构均可实现数据的顺序存储，构造出来的模型呈线性结构。<br>简而言之<br>数组适合查询和修改，不适合新增和删除<br>链表适合新增和删除，不适合查询</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/21/数组与链表/" data-id="ckfcohlc3000bigvismifl03v" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-express中的req&amp;res" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-express中的req&amp;res" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/24/express中的req&res/" class="article-date">
   <time datetime="2019-11-24T14:41:09.000Z" itemprop="datePublished">2019-11-24</time>
@@ -118,8 +78,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/express中的req&res/">express中的req&amp;res</a>
+    <h1 class="article-title" itemprop="name">
+      express中的req&amp;res
     </h1>
   
 
@@ -140,131 +100,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-CommonJs和es6的Module的区别" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/08/CommonJs和es6的Module的区别/" class="article-date">
-  <time datetime="2019-11-08T14:17:12.000Z" itemprop="datePublished">2019-11-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2020/03/21/数组与链表/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/08/CommonJs和es6的Module的区别/">CommonJs和es6的Module的区别</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.两者的模块导入导出语法不同，commonjs是module.exports，exports导出，require导入；ES6则是export导出，import导入。<br>2.commonjs是运行时加载模块，ES6是在静态编译期间就确定模块的依赖。<br>3.ES6在编译期间会将所有import提升到顶部，commonjs不会提升require。<br>4.commonjs导出的是一个值拷贝，会对加载结果进行缓存，一旦内部再修改这个值，则不会同步到外部。ES6是导出的一个引用，内部修改可以同步到外部。<br>5.两者的循环导入的实现原理不同，commonjs是当模块遇到循环加载时，返回的是当前已经执行的部分的值，而不是代码全部执行后的值，两者可能会有差异。所以，输入变量的时候，必须非常小心。ES6 模块是动态引用，如果使用import从一个模块加载变量（即import foo from ‘foo’），那些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。<br>6.commonjs中顶层的this指向这个模块本身，而ES6中顶层this指向undefined。<br>7.然后就是commonjs中的一些顶层变量在ES6中不再存在：</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/08/CommonJs和es6的Module的区别/" data-id="ckfcohlbe0000igvi04zhzfnm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-会员制牵涉的两个概念" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/18/会员制牵涉的两个概念/" class="article-date">
-  <time datetime="2019-10-18T02:53:08.000Z" itemprop="datePublished">2019-10-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          数组与链表
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/会员制牵涉的两个概念/">会员制牵涉的两个概念</a>
-    </h1>
   
+    <a href="/2019/11/08/CommonJs和es6的Module的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CommonJs和es6的Module的区别</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="沉没成本效应"><a href="#沉没成本效应" class="headerlink" title="沉没成本效应"></a>沉没成本效应</h3><p>人们为了避免损失带来的负面情绪而沉溺于过去的付出中，选择了非理性的行为方式。当顾客花钱在一家店办了会员卡，下次需要购物的时候，就会首先想到这家店。</p>
-<h3 id="锚定效应"><a href="#锚定效应" class="headerlink" title="锚定效应"></a>锚定效应</h3><p>人们在对某人某事做出判断时，很容易受到第一印象支配，就像沉入海底的锚一样把人们的思想固定在某处。会员费就像一个锚，成为会员之后，大家也会更倾向于持续到这家店购物，为的是把会员费赚回来。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/18/会员制牵涉的两个概念/" data-id="ckfcohlbj0001igvic6ds7etz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-产品方法论笔记1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/05/产品方法论笔记1/" class="article-date">
-  <time datetime="2019-10-05T15:19:59.000Z" itemprop="datePublished">2019-10-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/05/产品方法论笔记1/">产品方法论笔记1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="互联网时代特性"><a href="#互联网时代特性" class="headerlink" title="互联网时代特性"></a>互联网时代特性</h3><h5 id="1-信息复制分发的边际成本低"><a href="#1-信息复制分发的边际成本低" class="headerlink" title="1.信息复制分发的边际成本低"></a>1.信息复制分发的边际成本低</h5><p>链接让信息以字节为单位快速交互传递，互联网的出现使得信息复制分发的边际成本非常低，效率非常高<br>结果：大用户量，多生产，多供给一份信息的边际成本极低，信息产品经常是免费的，使得可转化用户群极大的扩展<br>当用户量变大，产品具有平台属性，需要重点权衡、考虑产品生态</p>
-<h5 id="2-快速迭代、数据和AB测试"><a href="#2-快速迭代、数据和AB测试" class="headerlink" title="2.快速迭代、数据和AB测试"></a>2.快速迭代、数据和AB测试</h5><p>社会科学的重点是实证性<br>PMF:porduct marketing fit<br>通过快速迭代来降低试错成本<br>AB测试：测试某一个变量的两个不同版本的效果差异，让 A和B只有某一变量不同，其他部分一致，测试用户对AB的反应差异<br>PM的能力：用户需求、商业变现、效率生产</p>
-<h5 id="3-体验设计成本增大"><a href="#3-体验设计成本增大" class="headerlink" title="3.体验设计成本增大"></a>3.体验设计成本增大</h5><p>极致的用户体验开始有了价值<br>重视体验的方法：以用户为中心，横向阻止资源，按需求进行成产和销售</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/05/产品方法论笔记1/" data-id="ckfcohlbn0003igvie2wzr3od" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
