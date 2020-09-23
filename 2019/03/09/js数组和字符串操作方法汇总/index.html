@@ -5,20 +5,20 @@
   
 
   
-  <title>CommonJs和es6的Module的区别 | 程飞是我儿子</title>
+  <title>js数组和字符串操作方法汇总 | 程飞是我儿子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.两者的模块导入导出语法不同，commonjs是module.exports，exports导出，require导入；ES6则是export导出，import导入。2.commonjs是运行时加载模块，ES6是在静态编译期间就确定模块的依赖。3.ES6在编译期间会将所有import提升到顶部，commonjs不会提升require。4.commonjs导出的是一个值拷贝，会对加载结果进行缓存，一">
+  <meta name="description" content="Array(数组):一、改变原数组的：pop()          删除数组最后一项，然后返回长度 lengthpush()        向数组最后一项添加值，然后返回长度 lengthshift()        删除数组第一项，返回删除的值unshift()     向数组第一项添加值，然后返回数组长度reverse()    反转数组splice(a,b,c)   删除从 a 开始的 b">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CommonJs和es6的Module的区别">
-<meta property="og:url" content="http://yoursite.com/2019/11/08/CommonJs和es6的Module的区别/index.html">
+<meta property="og:title" content="js数组和字符串操作方法汇总">
+<meta property="og:url" content="http://yoursite.com/2019/03/09/js数组和字符串操作方法汇总/index.html">
 <meta property="og:site_name" content="程飞是我儿子">
-<meta property="og:description" content="1.两者的模块导入导出语法不同，commonjs是module.exports，exports导出，require导入；ES6则是export导出，import导入。2.commonjs是运行时加载模块，ES6是在静态编译期间就确定模块的依赖。3.ES6在编译期间会将所有import提升到顶部，commonjs不会提升require。4.commonjs导出的是一个值拷贝，会对加载结果进行缓存，一">
+<meta property="og:description" content="Array(数组):一、改变原数组的：pop()          删除数组最后一项，然后返回长度 lengthpush()        向数组最后一项添加值，然后返回长度 lengthshift()        删除数组第一项，返回删除的值unshift()     向数组第一项添加值，然后返回数组长度reverse()    反转数组splice(a,b,c)   删除从 a 开始的 b">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-21T09:43:57.814Z">
+<meta property="og:updated_time" content="2020-09-23T01:21:44.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CommonJs和es6的Module的区别">
-<meta name="twitter:description" content="1.两者的模块导入导出语法不同，commonjs是module.exports，exports导出，require导入；ES6则是export导出，import导入。2.commonjs是运行时加载模块，ES6是在静态编译期间就确定模块的依赖。3.ES6在编译期间会将所有import提升到顶部，commonjs不会提升require。4.commonjs导出的是一个值拷贝，会对加载结果进行缓存，一">
+<meta name="twitter:title" content="js数组和字符串操作方法汇总">
+<meta name="twitter:description" content="Array(数组):一、改变原数组的：pop()          删除数组最后一项，然后返回长度 lengthpush()        向数组最后一项添加值，然后返回长度 lengthshift()        删除数组第一项，返回删除的值unshift()     向数组第一项添加值，然后返回数组长度reverse()    反转数组splice(a,b,c)   删除从 a 开始的 b">
   
     <link rel="alternate" href="/atom.xml" title="程飞是我儿子" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CommonJs和es6的Module的区别" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-js数组和字符串操作方法汇总" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/08/CommonJs和es6的Module的区别/" class="article-date">
-  <time datetime="2019-11-08T14:17:12.000Z" itemprop="datePublished">2019-11-08</time>
+    <a href="/2019/03/09/js数组和字符串操作方法汇总/" class="article-date">
+  <time datetime="2019-03-09T11:20:38.000Z" itemprop="datePublished">2019-03-09</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CommonJs和es6的Module的区别
+      js数组和字符串操作方法汇总
     </h1>
   
 
@@ -87,12 +87,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.两者的模块导入导出语法不同，commonjs是module.exports，exports导出，require导入；ES6则是export导出，import导入。<br>2.commonjs是运行时加载模块，ES6是在静态编译期间就确定模块的依赖。<br>3.ES6在编译期间会将所有import提升到顶部，commonjs不会提升require。<br>4.commonjs导出的是一个值拷贝，会对加载结果进行缓存，一旦内部再修改这个值，则不会同步到外部。ES6是导出的一个引用，内部修改可以同步到外部。<br>5.两者的循环导入的实现原理不同，commonjs是当模块遇到循环加载时，返回的是当前已经执行的部分的值，而不是代码全部执行后的值，两者可能会有差异。所以，输入变量的时候，必须非常小心。ES6 模块是动态引用，如果使用import从一个模块加载变量（即import foo from ‘foo’），那些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。<br>6.commonjs中顶层的this指向这个模块本身，而ES6中顶层this指向undefined。<br>7.然后就是commonjs中的一些顶层变量在ES6中不再存在：</p>
+        <h3 id="Array-数组"><a href="#Array-数组" class="headerlink" title="Array(数组):"></a>Array(数组):</h3><h4 id="一、改变原数组的："><a href="#一、改变原数组的：" class="headerlink" title="一、改变原数组的："></a>一、改变原数组的：</h4><p>pop()          删除数组最后一项，然后返回长度 length<br>push()        向数组最后一项添加值，然后返回长度 length<br>shift()        删除数组第一项，返回删除的值<br>unshift()     向数组第一项添加值，然后返回数组长度<br>reverse()    反转数组<br>splice(a,b,c)   删除从 a 开始的 b 个数值，并插入 c (b默认为1，c 默认空)</p>
+<h4 id="二、不改变原数组的："><a href="#二、不改变原数组的：" class="headerlink" title="二、不改变原数组的："></a>二、不改变原数组的：</h4><p> join()        数组转字符串，并用括号内的值连接。<br>sort()        从 a-z比较字符串，传入一个对比函数。function(a,b)，其中 a 代表循环的当前项，b 代表后一项，返回正值则互换位置。<br>concat(a,b)    返回一个a,b连接后的新的 arr。<br>slice(a,b)        返回从 a 到b的数组，不包含 b<br>indexOf()        返回要查的项的索引值。<br>lastindexOf()     从末尾开始查。</p>
+<h3 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String(字符串):"></a>String(字符串):</h3><h4 id="一、不改变原字符串的："><a href="#一、不改变原字符串的：" class="headerlink" title="一、不改变原字符串的："></a>一、不改变原字符串的：</h4><p>concat()    多个字符串组合，返回一个新字符串。<br>indexOf()   返回索引。<br>charAt(e)    返回 e 处的字符。<br>substring(a,b)   返回从 a 到 b 的子串。<br>slice(a,b)   同上<br>substr(a,b)   同上，但是返回的子串不包含 b。</p>
+<h4 id="二、不改变原字符串的："><a href="#二、不改变原字符串的：" class="headerlink" title="二、不改变原字符串的："></a>二、不改变原字符串的：</h4><p>replace()    用正则查找并替换。<br>toLowerCase()   转小写<br>toUpperCase()   转大写</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/08/CommonJs和es6的Module的区别/" data-id="ckfepchex00018gviof40v69z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/09/js数组和字符串操作方法汇总/" data-id="ckfepchep00008gvibn883n03" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -103,19 +106,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/11/24/express中的req&res/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/05/产品方法论笔记1/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          express中的req&amp;res
+          产品方法论笔记1
         
       </div>
     </a>
   
   
-    <a href="/2019/10/18/会员制牵涉的两个概念/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/01/16/var-let-const/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">会员制牵涉的两个概念</div>
+      <div class="article-nav-title">var,let,const</div>
     </a>
   
 </nav>
